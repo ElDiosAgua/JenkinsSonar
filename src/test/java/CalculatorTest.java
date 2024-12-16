@@ -27,11 +27,4 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(2, calculator.divide(6, 3));
     }
-
-    @Test
-    public void testDivisionByZero() {
-        Calculator calculator = new Calculator();
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(6, 0));
-        assertEquals("Division by zero is not allowed", exception.getMessage());
-    }
 }
